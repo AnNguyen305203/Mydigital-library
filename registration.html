@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">  <!--First create a link to the CSS file-->
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form>
+        <!--Use thwe fieldset function to create a field-->
+  </head>
+      <fieldset>
+        <legend>Personal Information</legend>
+
+  </head>
+  <!-- To create an Name with First Name and Surname with separate compartments and the optional Middle name-->
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="middle-name">Do you have a middle name?</label> <!--Create a question wghich is optional fopr the user to answer whether they have a middle name-->
+            <label for="middle-name-yes"><input type="radio" id="middle-name-yes" name="middle-name-option" value="yes">Yes</label>
+            <label for="middle-name-no"><input type="radio" id="middle-name-no" name="middle-name-option" value="no" checked>No</label>
+          </div>
+  
+          <div class="form-group" id="middle-name-group" style="display:none;">
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" name="middle-name">
+          </div>
+
+          <!-- Create a compartment for the user to input the adress-->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" autocomplete="street-address" required>
+            <small class="form-text" id="address-warning">Please enter a valid address.</small>
+          </div>
+
+          <!--Create a filed allow the email of the user is entered-->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+         <!--Create a password field-->  
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+         <!--Telephone field with a separate country code compartment-->  
+          <div class="form-group">
+            <label for="telephone-country-code">Country Code:</label>
+            <input type="tel" id="telephone-country-code" name="telephone-country-code" pattern="[0-9]+" required>
+
+        <!--create a separate compartment for the telephone number without the country code-->
+            <label for="telephone-number">Telephone Number:</label>
+            <input type="tel" id="telephone-number" name="telephone-number" pattern="[0-9]+" required>
+            <small class="form-text" id="telephone-warning">Please enter your phone number (without country code).</small>
+          </div>
+
+        <!-- Birthday field--> 
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <small class="form-text">You must be at least 13 years old to register.</small>
+            <small class="form-text">If you are over 50 years old, <a href="#">click here</a> for help with your registration.</small>
+          </div>
+  
+          <button type="submit">Register</button>
+        </fieldset>
+      </form>
+    </body>
+  </html>
